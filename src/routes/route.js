@@ -1,5 +1,5 @@
 const express = require('express');
-const externalModule = require('./lodger/logger')
+const externalModule = require('../lodger/logger')
 const external = require('../validator/formatter')
 const externalsrc =  require('../util/helper')
 const router = express.Router();
