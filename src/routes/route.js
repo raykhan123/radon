@@ -18,9 +18,11 @@ router.put("/users/:userId",userAuthController.updateUser)
 router.delete("/users/:userId", userAuthController.deleteteUser)
 
 // The userId is sent by front end
-router.get("/users/:userId",Common.mid1, userAuthController.getUserData)
+router.get("/users/:userId",Common.mid1, Common.mid2,userAuthController.getUserData)
 
-router.put("/users/:userId", Common.mid1,userAuthController.updateUser)
+router.put("/users/:userId", Common.mid1,Common.mid2,userAuthController.updateUser)
 
-router.delete("/users/:userId",Common.mid1, userAuthController.deleteteUser)
+router.delete("/users/:userId",Common.mid1,Common.mid2, userAuthController.deleteteUser)
+
+router.post("/users/:userId/posts",Common.mid1,Common.mid2, userAuthController.postMessage)
 module.exports = router;
